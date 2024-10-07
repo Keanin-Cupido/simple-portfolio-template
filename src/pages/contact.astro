@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+---
+
+<Layout title="Contact | Frontend Web Developer">
+  <h1 class="text-3xl font-bold mb-6">Get in Touch</h1>
+  <form class="max-w-md mx-auto">
+    <div class="mb-4">
+      <label for="name" class="block text-sm font-medium mb-1">Name</label>
+      <Input type="text" id="name" name="name" required />
+    </div>
+    <div class="mb-4">
+      <label for="email" class="block text-sm font-medium mb-1">Email</label>
+      <Input type="email" id="email" name="email" required />
+    </div>
+    <div class="mb-4">
+      <label for="message" class="block text-sm font-medium mb-1">Message</label>
+      <Textarea id="message" name="message" rows="4" required></Textarea>
+    </div>
+    <Button type="submit">Send Message</Button>
+  </form>
+</Layout>
